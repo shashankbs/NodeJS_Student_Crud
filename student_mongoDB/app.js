@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const studentRouter=require('./routers/studentRouter');
+const studentRouter = require("./routers/studentRouter");
 require("dotenv").config();
 
 const app = express();
@@ -13,7 +13,7 @@ mongoose
     console.log("MongoDB Connected Successfully...");
   })
   .catch((err) => {
-    console.log("Error connecting to database");
+    console.log("Error connecting to the database");
   });
 
 app.use(express.json());
