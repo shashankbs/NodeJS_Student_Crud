@@ -13,7 +13,7 @@ mongoose
     console.log("MongoDB Connected Successfully...");
   })
   .catch((err) => {
-    console.log("Error connecting to the database");
+    console.log("Error connecting to the database", err);
   });
 
 app.use(express.json());
