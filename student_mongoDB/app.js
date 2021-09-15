@@ -6,7 +6,7 @@ require("dotenv").config();
 const app = express();
 
 mongoose
-  .connect("mongodb://localhost:27017/studentDB", {
+  .connect(process.env.MONGO_DB, {
     useNewUrlParser: true,
   })
   .then((response) => {
@@ -23,8 +23,8 @@ app.use(
   })
 );
 
-app.use("/", studentRouter);
+app.use("/student", studentRouter);
 
 app.listen(3000, () => {
-  console.log("Listening on port", 3000);
+  console.log("Listening on port", process.env.PORT_NUMBER);
 });
