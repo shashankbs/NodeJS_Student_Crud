@@ -1,21 +1,31 @@
 <div class="container">
   <h3 class="center mat-display-1">LOGIN</h3>
 
-  <form class="form">
+  <form [formGroup]="loginForm" class="form">
     <div style="width: auto">
       <mat-form-field>
-        <mat-label>Username</mat-label>
-        <input matInput placeholder="Enter your username" />
+        <mat-label>Email</mat-label>
+        <input
+          formControlName="email"
+          matInput
+          placeholder="Enter your email"
+        />
       </mat-form-field>
     </div>
 
     <mat-form-field>
       <mat-label>Password</mat-label>
-      <input matInput placeholder="Enter your password" />
+      <input
+        formControlName="password"
+        matInput
+        placeholder="Enter your password"
+      />
     </mat-form-field>
 
     <div>
-      <button type="submit" mat-stroked-button>Login</button>&nbsp;
+      <button type="submit" (click)="loginUser()" mat-stroked-button>
+        Login</button
+      >&nbsp;
       <!-- <button type="submit" mat-stroked-button>
         <mat-icon>facebook</mat-icon>
         Login with Facebook

@@ -6,8 +6,34 @@ const create_token = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET);
 };
 
-const login_post = (req, res) => {
-  console.log(req.body.username + "" + req.body.password);
+const login_post = async (req, res) => {
+  try {
+    const email = req.body.email;
+    const user = await User.findOne({
+      email: email,
+    });
+    if (!user) {
+      res.status(404).send("No such user");
+    } else {
+      bcrypt
+        .compare(req.body.password, user.password)
+        .then((data) => {
+          {
+            const token = create_token(user._id);
+            res.status(201).json({
+              user: user.email,
+              jwt: token,
+            });
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+    console.log(req.body.username + "" + req.body.password);
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 const register_post = async (req, res) => {

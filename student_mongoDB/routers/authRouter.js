@@ -7,6 +7,7 @@ const authController = require("../controllers/authController");
 const authRouter = express.Router();
 
 authRouter.route("/register").post(authController.register_post);
+authRouter.route("/login").post(authController.login_post);
 
 //facebook authentication
 // passport.use(
