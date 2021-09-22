@@ -1,0 +1,29 @@
+.container {
+  margin-top: 5%;
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+  color: #007cc7;
+}
+
+.form {
+  text-align: center;
+}
+
+mat-form-field {
+  width: 300px;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+button {
+  background-color: #007cc7;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}

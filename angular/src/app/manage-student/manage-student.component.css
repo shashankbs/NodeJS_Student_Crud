@@ -1,0 +1,20 @@
+.container {
+  padding: 2% 3%;
+  margin: 3% 0%;
+}
+
+mat-form-field {
+  width: 30%;
+  display: block;
+}
+
+.title {
+  color: #007cc7;
+  margin-bottom: 4% !important;
+}
+
+button {
+  background-color: #007cc7;
+  color: white;
+  margin-top: 2%;
+}

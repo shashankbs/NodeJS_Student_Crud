@@ -1,0 +1,27 @@
+.heading {
+  text-align: center;
+  color: #007cc7;
+  margin-top: 3%;
+}
+
+.noStudents {
+  margin: 3% 0% 0% 3%;
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  text-align: center !important;
+}
+
+button {
+  background-color: #007cc7 !important;
+  color: white !important;
+}
+
+.createButton {
+  margin: 3% 0% 0% 3%;
+}

@@ -1,0 +1,24 @@
+.header {
+  background-color: #007cc7;
+  color: white;
+  padding: 1.5% 2% 1% 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  flex: 3;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  font-size: large;
+}

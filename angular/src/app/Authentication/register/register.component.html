@@ -1,0 +1,42 @@
+<div class="container">
+  <h3 class="center mat-display-1">REGISTER</h3>
+
+  <form class="form" [formGroup]="registerForm">
+    <div style="width: auto">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter your name" />
+      </mat-form-field>
+    </div>
+
+    <div style="width: auto">
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input
+          formControlName="email"
+          matInput
+          placeholder="Enter your email"
+        />
+      </mat-form-field>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input
+        formControlName="password"
+        matInput
+        placeholder="Enter your password"
+      />
+    </mat-form-field>
+
+    <div>
+      <button type="submit" mat-stroked-button (click)="registerUser()">
+        Register</button
+      >&nbsp;
+      <!-- <button type="submit" mat-stroked-button>
+        <mat-icon>facebook</mat-icon>
+        <a href="/auth/facebook"> Login with Facebook</a>
+      </button> -->
+    </div>
+  </form>
+</div>

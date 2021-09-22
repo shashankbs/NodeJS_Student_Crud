@@ -5,10 +5,14 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  facebookId: {
+  password: {
     type: String,
     required: true,
   },
+  // facebookId: {
+  //   type: String,
+  //   required: true,
+  // },
 });
 
 const User = mongoose.model("User", userSchema);

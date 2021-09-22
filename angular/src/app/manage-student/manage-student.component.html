@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="title mat-display-1">Add student</div>
+  <!-- {{ studentForm.value | json }} -->
+  <form [formGroup]="studentForm">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input formControlName="name" matInput type="text" required />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Address</mat-label>
+      <input formControlName="address" matInput type="text" required />
+    </mat-form-field>
+    <button type="submit" mat-button (click)="addStudent()">Submit</button>
+  </form>
+</div>
